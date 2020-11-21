@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "spring.datasource.devtools.restart.enabled",
+      "type": "java.lang.String",
+      "description": "Description for spring.datasource.devtools.restart.enabled."
+    },
+    {
+      "name": "spring.datasource.devtools.restart.additional-paths",
+      "type": "java.lang.String",
+      "description": "Description for spring.datasource.devtools.restart.additional-paths."
+    },
+    {
+      "name": "spring.datasource.devtools.restart.enabled",
+      "type": "java.lang.String",
+      "description": "Description for spring.datasource.devtools.restart.enabled."
+    }
+  ] }
