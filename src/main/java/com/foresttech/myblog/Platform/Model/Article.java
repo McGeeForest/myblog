@@ -5,8 +5,8 @@ import com.sun.javafx.beans.IDProperty;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "articles")
-public class Articles {
+@Table(name = "article")
+public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

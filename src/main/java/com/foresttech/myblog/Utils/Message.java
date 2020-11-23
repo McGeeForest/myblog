@@ -25,12 +25,14 @@ public class Message {
         return resData;
     }
 
-    public void setResData(Object resData) {
+    public Message setResData(Object resData) {
         this.resData = resData;
+        return this;
     }
 
-    public void setResHead(ResponseHead success) {
+    public Message setResHead(ResponseHead success) {
         this.resCode = success.getResCode();
         this.resDesc = success.getResDesc();
+        return this;
     }
 }

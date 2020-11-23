@@ -1,6 +1,6 @@
 package com.foresttech.myblog.Platform.Service;
 
-import com.foresttech.myblog.Platform.Model.Articles;
+import com.foresttech.myblog.Platform.Model.Article;
 import com.foresttech.myblog.Platform.Repository.ArticleRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
@@ -18,7 +18,7 @@ public class ArticleService {
     @Autowired
     private ArticleRepo articleRepo;
 
-    public void addArticle(Articles article){
+    public void addArticle(Article article){
         articleRepo.save(article);
     }
 }

@@ -1,6 +1,6 @@
 package com.foresttech.myblog.Platform.Api;
 
-import com.foresttech.myblog.Platform.Model.Articles;
+import com.foresttech.myblog.Platform.Model.Article;
 import com.foresttech.myblog.Platform.Repository.ArticleRepo;
 import com.foresttech.myblog.Platform.Service.ArticleService;
 import com.foresttech.myblog.Utils.Message;
@@ -18,7 +18,7 @@ public class ArticleApi {
 
     @RequestMapping("add")
     public Message addArticle(){
-        Articles article = new Articles();
+        Article article = new Article();
         article.setContent("文章内容");
         article.setDate("2020-11-18 11:18:00");
         article.setUser("McGeeForest");
