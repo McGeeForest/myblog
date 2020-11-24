@@ -16,6 +16,7 @@ spring:
 #    hibernate.ddl-auto: create  每次启动重新建表显然不可
     hibernate.ddl-auto: update
 
+
 #management:
 #  security:
 #    enabled: false  //springboot2.0之后的版本不生效

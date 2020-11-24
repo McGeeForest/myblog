@@ -1,7 +1,6 @@
 package com.foresttech.myblog.Platform.Api;
 
 import com.foresttech.myblog.Platform.Model.Article;
-import com.foresttech.myblog.Platform.Repository.ArticleRepo;
 import com.foresttech.myblog.Platform.Service.ArticleService;
 import com.foresttech.myblog.Utils.Message;
 import com.foresttech.myblog.Utils.ResponseHead;

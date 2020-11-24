@@ -10,13 +10,16 @@ import com.foresttech.myblog.Utils.ResponseHead;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
 import java.util.Optional;
 
 @Service
-public class UserService {
+public class UserService implements UserDetailsService {
 
     Logger logger = LoggerFactory.getLogger(UserService.class);
 
@@ -27,9 +30,20 @@ public class UserService {
         userRepo.save(user);
     }
 
-    //nickname唯一
-    public Optional<User> findUserByNickname(String nickname) {
-        Optional<User> user = userRepo.findByNickname(nickname);
-        return user;
+    //username唯一
+    public Optional<User> findUserByUsername(String username) {
+        return userRepo.findByUsername(username);
+    }
+
+    @Override
+    public User loadUserByUsername(String username) throws UsernameNotFoundException {
+        Optional<User> userflag = userRepo.findByUsername(username);
+        if (userflag.isPresent()) {
+            User user = userflag.get();
+            logger.info(user.getUsername());
+            return user;
+        }else {
+            throw new UsernameNotFoundException("用户不存在");
+        }
     }
 }
