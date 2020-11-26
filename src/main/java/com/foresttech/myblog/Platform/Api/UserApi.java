@@ -11,8 +11,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -57,9 +55,7 @@ public class UserApi {
             }
         }catch (Exception e){
             logger.info(e.getMessage() + "  用户" + username + "不存在。");
-
             return message.setResHead(ResponseHead.USER_NOT_EXIST).setResData("用户不存在");
-
         }
     }
 }

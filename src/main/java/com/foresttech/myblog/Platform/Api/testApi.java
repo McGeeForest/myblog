@@ -18,7 +18,16 @@ public class testApi {
     public Message te() throws IllegalAccessException {
         Message message = new Message();
         message.setResHead(ResponseHead.SUCCESS);
-        message.setResData("Data");
+        message.setResData("te");
+        logger.info(Parser.toString(message));
+        return message;
+    }
+
+    @RequestMapping("tt")
+    public Message tt() throws IllegalAccessException {
+        Message message = new Message();
+        message.setResHead(ResponseHead.SUCCESS);
+        message.setResData("tt");
         logger.info(Parser.toString(message));
         return message;
     }

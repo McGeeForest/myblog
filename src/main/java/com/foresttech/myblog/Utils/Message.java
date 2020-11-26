@@ -1,9 +1,12 @@
 package com.foresttech.myblog.Utils;
 
+import com.alibaba.fastjson.JSONObject;
+
 public class Message {
     private Integer resCode;
     private String resDesc;
     private Object resData;
+    private String resToken;
 
     public Integer getResCode() {
         return resCode;
@@ -34,5 +37,17 @@ public class Message {
         this.resCode = success.getResCode();
         this.resDesc = success.getResDesc();
         return this;
+    }
+
+    public String toJsonString() {
+        return JSONObject.toJSONString(this);
+    }
+
+    public String getResToken() {
+        return resToken;
+    }
+
+    public void setResToken(String resToken) {
+        this.resToken = resToken;
     }
 }
